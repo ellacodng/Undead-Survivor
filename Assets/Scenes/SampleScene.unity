@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 31529437}
   - component: {fileID: 31529439}
   - component: {fileID: 31529438}
+  - component: {fileID: 31529440}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -278,6 +279,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31529436}
   m_CullTransparentMesh: 1
+--- !u!114 &31529440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31529436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.38679248, g: 0.18792278, b: 0.18792278, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &57984771
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +305,7 @@ GameObject:
   - component: {fileID: 57984772}
   - component: {fileID: 57984774}
   - component: {fileID: 57984773}
+  - component: {fileID: 57984775}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -341,7 +358,7 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -358,6 +375,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57984771}
   m_CullTransparentMesh: 1
+--- !u!114 &57984775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57984771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.5235849, g: 0.55645907, b: 0.6981132, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &65520217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1439,7 @@ GameObject:
   - component: {fileID: 185236365}
   - component: {fileID: 185236367}
   - component: {fileID: 185236366}
+  - component: {fileID: 185236368}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1476,6 +1509,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185236364}
   m_CullTransparentMesh: 1
+--- !u!114 &185236368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185236364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.745283, g: 0.74451673, b: 0.56599325, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &222740085
 GameObject:
   m_ObjectHideFlags: 0
@@ -8228,6 +8276,7 @@ GameObject:
   - component: {fileID: 556619595}
   - component: {fileID: 556619597}
   - component: {fileID: 556619596}
+  - component: {fileID: 556619598}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -8297,6 +8346,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556619594}
   m_CullTransparentMesh: 1
+--- !u!114 &556619598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556619594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.4056604, g: 0.35782307, b: 0.37376887, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &574031588
 GameObject:
   m_ObjectHideFlags: 0
@@ -10030,6 +10094,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1622691932}
+        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+        m_MethodName: ClickStage2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18495,6 +18571,7 @@ GameObject:
   - component: {fileID: 1382046524}
   - component: {fileID: 1382046526}
   - component: {fileID: 1382046525}
+  - component: {fileID: 1382046527}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -18564,6 +18641,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382046523}
   m_CullTransparentMesh: 1
+--- !u!114 &1382046527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382046523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.3962264, g: 0.36071554, b: 0.36071554, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1390125036
 GameObject:
   m_ObjectHideFlags: 0
@@ -18575,7 +18667,7 @@ GameObject:
   - component: {fileID: 1390125037}
   - component: {fileID: 1390125038}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spawner_Stage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18644,6 +18736,7 @@ MonoBehaviour:
     health: 35
     speed: 2.5
   levelTime: 0
+  stageManager: {fileID: 1622691932}
 --- !u!1 &1397482652
 GameObject:
   m_ObjectHideFlags: 0
@@ -18851,7 +18944,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1751186006}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1444536176
 SpriteRenderer:
@@ -24323,7 +24416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -142.74}
+  m_AnchoredPosition: {x: 50, y: -102.16}
   m_SizeDelta: {x: 120, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1583964206
@@ -24401,6 +24494,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1622691932}
+        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+        m_MethodName: ClickStage3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24641,6 +24746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStage: 0
+  clickStage: 0
 --- !u!1 &1632943944
 GameObject:
   m_ObjectHideFlags: 0
@@ -24799,7 +24905,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1751186006}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
 --- !u!212 &1691758193
 SpriteRenderer:
@@ -25110,6 +25216,7 @@ Transform:
   - {fileID: 1809316023}
   - {fileID: 2107964259}
   - {fileID: 1390125037}
+  - {fileID: 2127670072}
   - {fileID: 1691758192}
   - {fileID: 1444536175}
   m_Father: {fileID: 0}
@@ -26404,13 +26511,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1622691930}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+      - m_Target: {fileID: 1622691932}
+        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+        m_MethodName: ClickStage1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -32334,6 +32441,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118013919}
   m_CullTransparentMesh: 1
+--- !u!1 &2127670071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127670072}
+  - component: {fileID: 2127670073}
+  m_Layer: 0
+  m_Name: Spawner_Stage2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2127670072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127670071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1751186006}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127670073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127670071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906bcea057ef0184a8d264b10ec46020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: []
+  spawnData:
+  - spriteType: 0
+    spawnTime: 0
+    health: 0
+    speed: 0
+  levelTime: 0
+  stageManager: {fileID: 1622691932}
+  spawnPoint2: []
+  spawnData2: []
+  levelTime2: 0
+  stageManager2: {fileID: 0}
 --- !u!1 &2129699339
 GameObject:
   m_ObjectHideFlags: 0

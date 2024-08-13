@@ -12,11 +12,11 @@ public class Enemy : MonoBehaviour
 
     public bool isLive;
 
-    private Rigidbody2D rigid;
-    private Collider2D coll;
-    private Animator anim;
-    private SpriteRenderer spriter;
-    private WaitForFixedUpdate wait;
+    protected Rigidbody2D rigid;
+    protected Collider2D coll;
+    protected Animator anim;
+    protected SpriteRenderer spriter;
+    protected WaitForFixedUpdate wait;
 
     // 초기화 함수
     protected void Awake()

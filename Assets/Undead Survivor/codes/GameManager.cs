@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// stage 마다 다른 구현 
+// 1. ... victory -> 상이
+// 2. ... dead -> 같음
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // 메모리에 바로 얹음
@@ -65,13 +69,18 @@ public class GameManager : MonoBehaviour
     }
 
     // stage 1클리어 시 빅토리 루틴
-    public void GameVictory()
+    public void GameVictory_Stage1()
     {
-        StartCoroutine(GameVictoryRoutine());
+        StartCoroutine(GameVictoryRoutine_Stage1());
+    }
+
+    public void GameVictory_Stage2()
+    {
+        StartCoroutine(GameVictoryRoutine_Stage2());
     }
 
     // stage 수정
-    IEnumerator GameVictoryRoutine()
+    IEnumerator GameVictoryRoutine_Stage1()
     {
         isLive = false;
         enemyCleaner.gameObject.SetActive(true);
@@ -82,13 +91,32 @@ public class GameManager : MonoBehaviour
         uiResult.Win();
 
         if (stageManager.currentStage < 3)
-            stageManager.currentStage++;
+            stageManager.currentStage = 1;
 
         Stop();
         
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
         
     }
+    IEnumerator GameVictoryRoutine_Stage2()
+    {
+        isLive = false;
+        enemyCleaner.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        uiResult.gameObject.SetActive(true);
+        uiResult.Win();
+
+        if (stageManager.currentStage < 3)
+            stageManager.currentStage = 2;
+
+        Stop();
+        
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
+        
+    }
+
     public void GameRetry()
     {
         SceneManager.LoadScene(0); // 이름 혹은 인덱스로 화면을 다시 불러옴
@@ -105,7 +133,7 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
-            GameVictory();
+            GameVictory_Stage1();
         }
     }
 
