@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
     }
 
+    // stage 1클리어 시 빅토리 루틴
     public void GameVictory()
     {
         StartCoroutine(GameVictoryRoutine());
@@ -72,19 +73,20 @@ public class GameManager : MonoBehaviour
     // stage 수정
     IEnumerator GameVictoryRoutine()
     {
-            isLive = false;
-            enemyCleaner.gameObject.SetActive(true);
+        isLive = false;
+        enemyCleaner.gameObject.SetActive(true);
 
-            yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
 
-            uiResult.gameObject.SetActive(true);
+        uiResult.gameObject.SetActive(true);
+        uiResult.Win();
 
-        // stage 가 0일 경우에만 캐릭터 lock 을 함
-            if(stageManager.currentStage == 0) 
-                uiResult.Win();
-            Stop();
+        if (stageManager.currentStage < 3)
+            stageManager.currentStage++;
 
-            AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
+        Stop();
+        
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
         
     }
     public void GameRetry()

@@ -6,14 +6,9 @@ public class StageManager : MonoBehaviour
 {
     public int currentStage;
 
-    void Stage2ButtonClick()
+    // 게임이 시작될 때, 스테이지 레벨 초기화
+    private void Start()
     {
-        currentStage = 1;
+        currentStage = 0;
     }
-
-    void Stage3ButtonClick()
-    {
-        currentStage = 2;
-    }
-
 }

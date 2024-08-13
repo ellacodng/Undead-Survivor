@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
 
     private void Awake()
     {
-        rigid = GetComponent<Rigidbody2D>();        
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     public void Init(float damage, int per, Vector3 dir)
