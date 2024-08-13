@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriter;
     private WaitForFixedUpdate wait;
 
-    // ÃÊ±âÈ­ ÇÔ¼ö
+    // ì´ˆê¸°í™” í•¨ìˆ˜
     protected void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         isLive = true;
         coll.enabled = true;
         rigid.simulated = true;
-        spriter.sortingOrder = 2;
+        spriter.sortingOrder = 2; // spriter ìˆ˜ì •í•¨
         anim.SetBool("Dead", false);
         health = maxHealth;
     }
@@ -91,7 +91,7 @@ public class Enemy : MonoBehaviour
             isLive = false;
             coll.enabled = false;
             rigid.simulated = false;
-            spriter.sortingOrder = 1;
+            spriter.sortingOrder = 1; // sortingOrderì„ ìˆ˜ì •í•´ë´„
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
@@ -103,7 +103,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator KnockBack()
     {
-        yield return wait; // ´ÙÀ½ ÇÏ³ªÀÇ ¹°¸® ÇÁ·¹ÀÓ µô·¹ÀÌ
+        yield return wait; // ë‹¤ìŒ í•˜ë‚˜ì˜ ë¬¼ë¦¬ í”„ë ˆì„ ë”œë ˆì´
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
