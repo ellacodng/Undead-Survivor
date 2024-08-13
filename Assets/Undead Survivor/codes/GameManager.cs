@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance; // ¸Ş¸ğ¸®¿¡ ¹Ù·Î ¾ñÀ½
+    public static GameManager instance; // ë©”ëª¨ë¦¬ì— ë°”ë¡œ ì–¹ìŒ
     [Header("# Game Comtrol")]
     public bool isLive;
     public float gameTime;
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public LevelUp uiLevelUp;
     public Result uiResult;
     public GameObject enemyCleaner;
+    public StageManager stageManager;
 
     void Awake()
     {
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(GameOverRoutine()); // µô·¹ÀÌ¸¦ À§ÇØ ÄÚ·çÆ¾À» »ç¿ë
+        StartCoroutine(GameOverRoutine()); // ë”œë ˆì´ë¥¼ ìœ„í•´ ì½”ë£¨í‹´ì„ ì‚¬ìš©
     }
 
 
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameVictoryRoutine());
     }
 
+    // stage ìˆ˜ì •
     IEnumerator GameVictoryRoutine()
     {
             isLive = false;
@@ -76,7 +78,10 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             uiResult.gameObject.SetActive(true);
-            uiResult.Win();
+
+        // stage ê°€ 0ì¼ ê²½ìš°ì—ë§Œ ìºë¦­í„° lock ì„ í•¨
+            if(stageManager.currentStage == 0) 
+                uiResult.Win();
             Stop();
 
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
@@ -84,7 +89,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameRetry()
     {
-        SceneManager.LoadScene(0); // ÀÌ¸§ È¤Àº ÀÎµ¦½º·Î È­¸éÀ» ´Ù½Ã ºÒ·¯¿È
+        SceneManager.LoadScene(0); // ì´ë¦„ í˜¹ì€ ì¸ë±ìŠ¤ë¡œ í™”ë©´ì„ ë‹¤ì‹œ ë¶ˆëŸ¬ì˜´
     }
 
 
