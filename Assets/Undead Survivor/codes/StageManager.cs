@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-    public GameObject gameScene;
+    public int currentStage;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,4 +17,15 @@ public class StageManager : MonoBehaviour
     {
         
     }
+
+    void Stage2ButtonClick()
+    {
+        currentStage = 1;
+    }
+
+    void Stage3ButtonClick()
+    {
+        currentStage = 2;
+    }
+
 }
