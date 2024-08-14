@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
     AudioSource[] sfxPlayers;
     int channelIndex;
 
-    public enum Sfx { Dead, Hit, LevelUp=3, Lose, Melee, Range=7, Select, Win }
+    public enum Sfx { Dead, Hit, LevelUp=3, Lose, Melee, Range=7, Select, Win, SpecialAttack }
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
 
     void Init()
     {
-        // ¹è°æÀ½ ÇÃ·¹ÀÌ¾î ÃÊ±âÈ­
+        // ë°°ê²½ìŒ í”Œë ˆì´ì–´ ì´ˆê¸°í™”
         GameObject bgmObject = new GameObject("BgmPlayer");
         bgmObject.transform.parent = transform;
         bgmPlayer = bgmObject.AddComponent<AudioSource>();
@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
         bgmPlayer.clip = bgmClip;
         bgmEffect = Camera.main.GetComponent<AudioHighPassFilter>();
 
-        // È¿°úÀ½ ÇÃ·¹ÀÌ¾î ÃÊ±âÈ­
+        // íš¨ê³¼ìŒ í”Œë ˆì´ì–´ ì´ˆê¸°í™”
         GameObject sfxObject = new GameObject("SfxPlayer");
         sfxObject.transform.parent = transform;
         sfxPlayers = new AudioSource[channels];

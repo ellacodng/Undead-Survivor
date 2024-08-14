@@ -59,7 +59,6 @@ public class Enemy : MonoBehaviour
         coll.enabled = true;
         rigid.simulated = true;
         spriter.sortingOrder = 2; // spriter 수정함
-        anim.SetBool("Dead", false);
         health = maxHealth;
     }
 
@@ -92,9 +91,11 @@ public class Enemy : MonoBehaviour
             coll.enabled = false;
             rigid.simulated = false;
             spriter.sortingOrder = 1; // sortingOrder을 수정해봄
-            anim.SetBool("Dead", true);
+            anim.SetTrigger("Dead");
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
+
+            Invoke("Dead", 0.5f);
 
             if(GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
@@ -109,7 +110,7 @@ public class Enemy : MonoBehaviour
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }
 
-    void Dead()
+    protected void Dead()
     {
         gameObject.SetActive(false);
     }

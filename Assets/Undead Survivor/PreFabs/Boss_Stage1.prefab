@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 3462097423430338880}
   - component: {fileID: 3462097423430338883}
   - component: {fileID: 3462097423430338911}
+  - component: {fileID: 4743889407225455213}
   m_Layer: 6
   m_Name: Boss_Stage1
   m_TagString: Enemy
@@ -183,7 +184,7 @@ Animator:
   m_GameObject: {fileID: 3462097423430338884}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 050556270436d4f4288557291a1a99c0, type: 2}
+  m_Controller: {fileID: 22100000, guid: 8d1d920724ffb8a409ce0e458dc4b7a9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -243,3 +244,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2668b689124c4498a435f280afc6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4743889407225455213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3462097423430338884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb45d3ae3528b644b5c235e43c309fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  health: 0
+  maxHealth: 0
+  animCon:
+  - {fileID: 22100000, guid: 8d1d920724ffb8a409ce0e458dc4b7a9, type: 2}
+  target: {fileID: 0}
+  isLive: 0
+  specialAttackCooldown: 5
